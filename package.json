@@ -1,0 +1,36 @@
+{
+  "name": "react-image-editor-pro",
+  "version": "1.0.4",
+  "description": "react image cropper editor zoom rotate crop photo modal",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "antd",
+    "cropper",
+    "image-editor",
+    "image cropper"
+  ],
+  "author": "nikdelvify",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.17.7",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@types/styled-components": "^5.1.34",
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.4.0",
+    "antd": "^5.20.6",
+    "lodash": "^4.17.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-image-crop": "^11.0.7",
+    "styled-components": "^6.1.13"
+  }
+}

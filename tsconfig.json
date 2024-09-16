@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "target": "ES2022",
+    "moduleResolution": "node", // Updated to "node"
+    "module": "CommonJS",
+    "jsx": "react-jsx", // Added to support JSX syntax
+    "declaration": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "outDir": "node_modules/dist"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
