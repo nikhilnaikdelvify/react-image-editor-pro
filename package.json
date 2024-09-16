@@ -1,10 +1,14 @@
 {
   "name": "react-image-editor-pro",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "react image cropper editor zoom rotate crop photo modal",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "homepage": "https://nikhil-naik-portfolio.netlify.app/",
+  "repository": {
+    "url": "https://github.com/nikhilnaikdelvify/react-image-editor-pro"
+  },
   "scripts": {
     "build": "tsup"
   },
