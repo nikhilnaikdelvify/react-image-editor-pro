@@ -119,6 +119,78 @@ export function ImageUpload({
   );
 }
 ```
+### Parse Scaled Image File
+```
+// /**
+//  * This function takes an image URL, loads the image, and scales it to fit within a
+//  * 300x300 preview while maintaining the image's aspect ratio. The image is centered
+//  * within the preview area, and any extra space is filled with a white background.
+//  * A new image file is then created from the canvas and returned as a JPEG.
+//  **/
+
+const DEFAULT_PREVIEW_WIDTH = 400;
+const DEFAULT_PREVIEW_HEIGHT = 400;
+
+export const parseScaledImageFile = (imageUrl: string): Promise<File> => {
+  return new Promise((resolve) => {
+    const image = new Image();
+    image.src = imageUrl;
+    image.onload = () => {
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+
+      const imgAspect = image.width / image.height;
+      const previewAspect = DEFAULT_PREVIEW_WIDTH / DEFAULT_PREVIEW_HEIGHT;
+
+      let canvasWidth, canvasHeight;
+      let offsetX = 0,
+        offsetY = 0;
+
+      // Calculate the dimensions of the image to fit inside the preview
+      if (imgAspect > previewAspect) {
+        // Image is wider than the preview
+        canvasWidth = DEFAULT_PREVIEW_WIDTH;
+        canvasHeight = DEFAULT_PREVIEW_WIDTH / imgAspect;
+      } else {
+        // Image is taller or has the same aspect ratio as the preview
+        canvasWidth = DEFAULT_PREVIEW_HEIGHT * imgAspect;
+        canvasHeight = DEFAULT_PREVIEW_HEIGHT;
+      }
+
+      // Center the image in the canvas
+      offsetX = (DEFAULT_PREVIEW_WIDTH - canvasWidth) / 2;
+      offsetY = (DEFAULT_PREVIEW_HEIGHT - canvasHeight) / 2;
+
+      canvas.width = DEFAULT_PREVIEW_WIDTH;
+      canvas.height = DEFAULT_PREVIEW_HEIGHT;
+
+      // Set the background color to #ffffff
+      ctx!.fillStyle = "#ffffff";
+      ctx!.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx!.drawImage(
+        image,
+        0,
+        0,
+        image.width,
+        image.height,
+        offsetX,
+        offsetY,
+        canvasWidth,
+        canvasHeight
+      );
+      canvas.toBlob((blob) => {
+        if (blob) {
+          const file = new File([blob], "scaled-image.jpg", {
+            type: "image/jpeg",
+          });
+          resolve(file);
+        }
+      }, "image/jpeg");
+    };
+  });
+};
+```
 
 ## `ImageUploadCropperModal` Props
 
