@@ -1,6 +1,6 @@
 {
   "name": "react-image-editor-pro",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "react image cropper editor zoom rotate crop photo modal",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
