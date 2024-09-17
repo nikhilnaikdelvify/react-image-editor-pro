@@ -191,15 +191,15 @@ export const parseScaledImageFile = (imageUrl: string): Promise<File> => {
 
 | **Prop**             | **Type**         | **Description**                                          |
 | -------------------- | ---------------- | -------------------------------------------------------- |
-| `title`              | `string`         | The title of the modal.                                  |
-| `reset`              | `string`         | The text for the reset button.                           |
-| `cancel`             | `string`         | The text for the cancel button.                          |
-| `upload`             | `string`         | The text for the upload button.                          |
-| `yPosition`          | `string`         | The label for the Y position control.                    |
-| `xPosition`          | `string`         | The label for the X position control.                    |
-| `properties`         | `string`         | The label for the properties control.                    |
-| `rotate`             | `string`         | The label for the rotate control.                        |
-| `zooming`            | `string`         | The label for the zoom control.                          |
+| `title?`              | `string`         | The title of the modal.                                  |
+| `reset?`              | `string`         | The text for the reset button.                           |
+| `cancel?`             | `string`         | The text for the cancel button.                          |
+| `upload?`             | `string`         | The text for the upload button.                          |
+| `yPosition?`          | `string`         | The label for the Y position control.                    |
+| `xPosition?`          | `string`         | The label for the X position control.                    |
+| `properties?`         | `string`         | The label for the properties control.                    |
+| `rotate?`             | `string`         | The label for the rotate control.                        |
+| `zooming?`            | `string`         | The label for the zoom control.                          |
 | `setImage`           | `File \|null `   | A function to handle the uploaded image file.            |
 | `imageUrl`           | `string \| null` | The URL of the image to display (if available).          |
 | `setCroppedImageUrl` | `string \| null` | A function to handle the URL of the cropped image.       |
