@@ -21,8 +21,8 @@ yarn add react-image-editor-pro
 ```
 
 ## Demo Video
-
-https://github.com/user-attachments/assets/361ca9df-3366-4d80-bf57-f8242db17dae
+[![react-image-editor-pro](https://raw.githubusercontent.com/nikhilnaikdelvify/react-image-editor-pro/main/src/assets/react-image-editor-pro.gif?raw=true)
+](https://github.com/nikhilnaikdelvify/react-image-editor-pro/blob/main/src/assets/react-image-editor-pro.gif?raw=true)
 
 ## Usage Example
 
