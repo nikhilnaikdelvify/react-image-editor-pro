@@ -1,5 +1,6 @@
 /src
 /node_modules
+/src/assets
 
 tsconfig.json
 tsup.config.ts
