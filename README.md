@@ -19,10 +19,10 @@ or
 
 yarn add react-image-editor-pro
 ```
+
 ## Demo Video
+
 https://github.com/user-attachments/assets/361ca9df-3366-4d80-bf57-f8242db17dae
-
-
 
 ## Usage Example
 
@@ -96,15 +96,8 @@ export function ImageUpload({
         </UploadWrapper>
       </Upload>
       <ImageCropperModal
-        title={"title"}
-        reset={"reset"}
-        cancel={"cancel"}
-        upload={"upload"}
-        yPosition={"yPosition"}
-        xPosition={"xPosition"}
-        properties={"properties"}
-        zooming={"zoom"}
-        rotate={"rotate"}
+        title={"Custom Title"}
+        rotate={"Rotation Slider"}
         setImage={setImage}
         imageUrl={imageUrl}
         setCroppedImageUrl={setCroppedImageUrl}
@@ -119,7 +112,9 @@ export function ImageUpload({
   );
 }
 ```
+
 ### Parse Scaled Image File
+
 ```
 // /**
 //  * This function takes an image URL, loads the image, and scales it to fit within a
@@ -194,27 +189,26 @@ export const parseScaledImageFile = (imageUrl: string): Promise<File> => {
 
 ## `ImageUploadCropperModal` Props
 
-| **Prop**             | **Type**          | **Description**                                          |
-| -------------------- | ----------------- | -------------------------------------------------------- |
-| `title`              | `string`          | The title of the modal.                                  |
-| `reset`              | `string`          | The text for the reset button.                           |
-| `cancel`             | `string`          | The text for the cancel button.                          |
-| `upload`             | `string`          | The text for the upload button.                          |
-| `yPosition`          | `string`          | The label for the Y position control.                    |
-| `xPosition`          | `string`          | The label for the X position control.                    |
-| `properties`         | `string`          | The label for the properties control.                    |
-| `rotate`             | `string`          | The label for the rotate control.                        |
-| `zooming`            | `string`          | The label for the zoom control.                          |
-| `setImage`           |  `File \|null `         | A function to handle the uploaded image file.            |
-| `imageUrl`           | `string \| null`  | The URL of the image to display (if available).          |
-| `setCroppedImageUrl` | `string \| null`                  | A function to handle the URL of the cropped image.       |
-| `setScaledImageUrl`  | `string \| null`                  | A function to handle the URL of the scaled image.        |
-| `originalImageFile`  | `File \| null`    | The original image file being edited.                    |
-| `scaledImageUrl`     | `string \| null`  | The URL of the scaled image (if available).              |
-| `setImageUrl`        | `string \| null`                   | A function to handle the image URL for display purposes. |
-| `setModalVisible`    |  `boolean`                   | A function to handle the modal visibility.               |
-| `modalVisible`       | `boolean`         | The visibility state of the modal.                       |
-
+| **Prop**             | **Type**         | **Description**                                          |
+| -------------------- | ---------------- | -------------------------------------------------------- |
+| `title`              | `string`         | The title of the modal.                                  |
+| `reset`              | `string`         | The text for the reset button.                           |
+| `cancel`             | `string`         | The text for the cancel button.                          |
+| `upload`             | `string`         | The text for the upload button.                          |
+| `yPosition`          | `string`         | The label for the Y position control.                    |
+| `xPosition`          | `string`         | The label for the X position control.                    |
+| `properties`         | `string`         | The label for the properties control.                    |
+| `rotate`             | `string`         | The label for the rotate control.                        |
+| `zooming`            | `string`         | The label for the zoom control.                          |
+| `setImage`           | `File \|null `   | A function to handle the uploaded image file.            |
+| `imageUrl`           | `string \| null` | The URL of the image to display (if available).          |
+| `setCroppedImageUrl` | `string \| null` | A function to handle the URL of the cropped image.       |
+| `setScaledImageUrl`  | `string \| null` | A function to handle the URL of the scaled image.        |
+| `originalImageFile`  | `File \| null`   | The original image file being edited.                    |
+| `scaledImageUrl`     | `string \| null` | The URL of the scaled image (if available).              |
+| `setImageUrl`        | `string \| null` | A function to handle the image URL for display purposes. |
+| `setModalVisible`    | `boolean`        | A function to handle the modal visibility.               |
+| `modalVisible`       | `boolean`        | The visibility state of the modal.                       |
 
 ## Additional Notes
 
