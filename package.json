@@ -1,6 +1,6 @@
 {
   "name": "react-image-editor-pro",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "react image cropper editor zoom rotate crop photo modal",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
-    "antd": "^5.20.6",
+    "antd": "^5.19.0",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
