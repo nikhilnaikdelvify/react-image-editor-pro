@@ -17,9 +17,6 @@ import {
 import { Modal } from "./Modal";
 import { ImageUploadCropperModalProps } from "../types/types";
 
-const DEFAULT_PREVIEW_WIDTH = 400;
-const DEFAULT_PREVIEW_HEIGHT = 400;
-
 export function ImageCropperModal({
   title = "Crop Image",
   reset = "Reset",
@@ -32,6 +29,7 @@ export function ImageCropperModal({
   properties = "Properties",
   rotate = "Rotate",
   zooming = "Zoom",
+  isMobile,
   setCroppedImageUrl,
   setScaledImageUrl,
   originalImageFile,
@@ -40,6 +38,9 @@ export function ImageCropperModal({
   setModalVisible,
   modalVisible,
 }: ImageUploadCropperModalProps) {
+  const DEFAULT_PREVIEW_WIDTH = isMobile ? 200 : 400;
+  const DEFAULT_PREVIEW_HEIGHT = isMobile ? 200 : 400;
+
   const [crop, setCrop] = useState<PixelCrop>({
     unit: "px",
     width: DEFAULT_PREVIEW_WIDTH,
@@ -370,7 +371,7 @@ export function ImageCropperModal({
               />
             </ReactCrop>
           </ImageUploadPreviewContainer>
-          <VerticalSliderCropper title={yPosition}>
+          <VerticalSliderCropper title={yPosition} $isMobile={isMobile}>
             <Slider
               vertical
               min={-DEFAULT_PREVIEW_HEIGHT * zoom}

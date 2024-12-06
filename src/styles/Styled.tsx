@@ -81,10 +81,11 @@ export const SliderModalText = styled(TextB2)`
   margin-top: -10px;
 `;
 
-const VerticalCropperContainer = styled.div`
+const VerticalCropperContainer = styled.div<{ $isMobile?: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: ${({ $isMobile }) => ($isMobile ? "200px" : "100%")};
 `;
 
 const VerticalCropperTitle = styled.label`
@@ -107,9 +108,10 @@ interface VerticalSliderCropperProps {
 export const VerticalSliderCropper = ({
   children,
   title,
-}: VerticalSliderCropperProps) => {
+  $isMobile,
+}: VerticalSliderCropperProps & { $isMobile?: boolean }) => {
   return (
-    <VerticalCropperContainer>
+    <VerticalCropperContainer $isMobile={$isMobile}>
       <VerticalCropperTitle>{title}</VerticalCropperTitle>
       <VerticalCropperSliderContainer>
         {children}

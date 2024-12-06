@@ -10,6 +10,7 @@ export interface ImageUploadCropperModalProps {
   properties?: string;
   rotate?: string;
   zooming?: string;
+  isMobile: boolean;
   setImage: Setter<File | null>;
   imageUrl: string | null;
   setCroppedImageUrl: Setter<string | null>;
